@@ -11,6 +11,7 @@ import { LogIn } from './components/LogIn';
 import axios from 'axios';
 import { TaskRenderer } from './components/TaskRenderer';
 import { MyCsrfToken } from './components/CsrfToken';
+import { Header } from './components/Header';
 
 export interface IUser{
   email: string;
@@ -49,38 +50,27 @@ function App() {
       setUser(null)
     }
   }
+
   MyCsrfToken()
+
   return (
     <Container className="App">
 
-      <Row className='header'>
-        <Col xs={3}>
-          {user === null ? 
-          <Button onClick={()=> setShowLogIn(false)}>
-            SIGN UP
-          </Button> :
-          null}
-        </Col>
-        <Col xs={6}>
-          <h1>TASK MANAGER</h1>
-        </Col>
-        <Col xs={3}>
-          {user === null ? 
-          <Button onClick={()=>setShowLogIn(true)}>LOG IN</Button> : 
-          <Button onClick={logMeOut} >LOG OUT</Button>}
-        </Col>
-      </Row>
+      <Header user={user} logMeOut={logMeOut} setShowLogIn={setShowLogIn} />
+      
       {showLogIn ?
       <LogIn /> :
       user === null ?
       <SignUp setShowLogIn={setShowLogIn} /> :
       <TaskRenderer user={user}/>
       }
+
       <Row className='footer'>
         <Col></Col>
         <Col></Col>
         <Col></Col>
       </Row>
+
     </Container>
   )
 }

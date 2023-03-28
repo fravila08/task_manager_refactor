@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+.App{
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+#header{
+    margin-top: 5vh;
+
+}
+
+.headerCol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
