@@ -3,7 +3,6 @@
 
 This project is a TO-DO application with user authentication capabilities and CRUD operations.
 
-
 ## Tech Stack
 
 **CLIENT**
@@ -22,6 +21,8 @@ This project is a TO-DO application with user authentication capabilities and CR
 
 </p>
 
- 
+ ## Resources
+
+ - [Trello Board](https://trello.com/b/8OF209mc/todoapprefactor) 
 
 
