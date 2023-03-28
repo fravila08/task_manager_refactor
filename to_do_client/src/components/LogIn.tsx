@@ -1,19 +1,6 @@
-import { FormEvent, useState } from "react";
-import { Form } from "react-bootstrap";
-import axios from "axios";
+import { useState } from "react";
+import { logIn } from "../utilities";
 
-
-
-export const logIn = async (event: FormEvent, email:string, password:string)=>{
-    event.preventDefault();
-    let response = await axios.put('user/', {
-        email : email,
-        password : password
-    })
-    if(response.data.login){
-        window.location.reload()
-    }
-}
 
 export const LogIn: React.FC = () => {
     const [email, setEmail] = useState<string>('')

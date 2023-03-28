@@ -1,12 +1,6 @@
-import { IUser } from "../App";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { HeaderProps } from "../interfaces";
 
-
-export interface HeaderProps{
-    user : IUser | null;
-    setShowLogIn : (showLogIn:boolean) => void;
-    logMeOut :()=>void;
-}
 
 export const Header : React.FC<HeaderProps> = ({user, setShowLogIn, logMeOut}) => {
 

@@ -1,19 +1,7 @@
-import axios from "axios";
 import { FormEvent, useState } from "react";
-import { Form } from "react-bootstrap";
+import { SignUpProps } from "../interfaces";
+import { signUserUp } from "../utilities";
 
-export interface SignUpProps{
-    setShowLogIn:(showLogIn: boolean) => void;
-}
-
-
-export const signUserUp =async (email:string, password:string):Promise<boolean> => {
-    let response = await axios.post('user/',{
-        email : email,
-        password : password
-    })
-    return response.data.success
-}
 
 
 export const SignUp: React.FC<SignUpProps> = ({setShowLogIn}) => {

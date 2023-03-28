@@ -1,9 +1,6 @@
-import { ITask } from "./TaskRenderer";
+import { TaskProps } from "../interfaces";
 import { Row, Col } from "react-bootstrap";
 
-export interface TaskProps{
-    task: ITask;
-}
 
 export const Task: React.FC<TaskProps> = ({
     task
